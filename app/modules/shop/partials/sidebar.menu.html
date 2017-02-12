@@ -1,0 +1,29 @@
+<div id="sidebar-menu">
+    <div class="panel-group shop-category-products" id="accordian">
+        <div ng-repeat="category in sidebar" class="panel panel-default">
+            
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href
+                       data-toggle="#{{ category.id }}"
+                       data-parent="#accordian">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>{{ category.translate | translate }}
+                    </a>
+                </h4>
+            </div>
+
+            <div id="{{ category.id }}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li ng-repeat="subcategory in category.items">
+                            <a ui-sref="root.shop.query({ categoryId: category.id, subcategory: subcategory.link, title: subcategory.title })">
+                                {{ subcategory.translate | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

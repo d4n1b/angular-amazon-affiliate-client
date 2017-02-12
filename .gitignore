@@ -1,0 +1,21 @@
+#-----------------
+# System
+#-----------------
+.DS_Store
+.DS_Store?
+node_modules
+bower_components
+*.log
+*.lock
+vendor
+.tmp
+
+#-----------------
+# Dynamics
+#-----------------
+dist
+assets/css/*.css
+data/uploads
+!snapshots
+snapshots/**/*.html
+sitemap.xml

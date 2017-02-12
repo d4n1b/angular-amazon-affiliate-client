@@ -1,0 +1,53 @@
+{
+  "name": "ng-afiliados",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install": {
+    "path": "lib"
+  },
+  "dependencies": {
+    "almond": "latest",
+    "animate.css": "latest",
+    "angular": "~1.4.4",
+    "angular-translate": "~2.7.2",
+    "angular-translate-loader-url": "2.6.1",
+    "angular-translate-interpolation-messageformat": "2.6.1",
+    "angular-translate-loader-static-files": "2.7.2",
+    "angular-translate-storage-local": "~2.6.1",
+    "angular-mocks": "~1.2.28",
+    "angular-cookies": "~1.4.5",
+    "angular-cookie-law": "latest",
+    "angular-sanitize": "~1.2.28",
+    "angular-bootstrap": "latest",
+    "cookie-disclaimer": "^1.2.0",
+    "croppic": "latest",
+    "ui-router": "~0.2.15",
+    "bootstrap": "~3.0.3",
+    "components-font-awesome": "latest",
+    "flag-icon-css": "latest",
+    "gmaps": "~0.4.9",
+    "html5shiv": "~3.6.2",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "jQuery-menu-aim": "latest",
+    "lodash": "latest",
+    "magnific-popup": "~1.0.0",
+    "ngDialog": "latest",
+    "pretty-photo": "~1.0.1",
+    "scrollup": "~2.4.1",
+    "requirejs": "latest",
+    "respond": "latest",
+    "slick-carousel": "~1.5.8"
+  },
+  "resolutions": {
+    "angular-translate": "~2.7.2",
+    "angular": "1.4.5",
+    "angular-cookies": "~1.4.5"
+  }
+}

@@ -1,0 +1,40 @@
+<h1 class="title text-left">{{ ::'blog.title' | translate }}</h1>
+
+<div class="blog-post-area">
+    <div ng-repeat="post in posts" class="single-blog-post">
+        <h3>{{ ::post.title }}</h3>
+        <div class="post-meta">
+            <ul>
+                <li><i class="fa fa-user"></i> {{ post.author }}</li>
+                <!-- <li><i class="fa fa-clock-o"></i> {{ ::post.date | date:'h:mm:ss' }}</li> -->
+                <li><i class="fa fa-calendar"></i> {{ ::post.date | date:'MM/dd/yyyy' }}</li>
+            </ul>
+            <!-- <span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </span> -->
+        </div>
+        <a href ui-sref="root.blog.postSingle({ postId: post.id, postLink: post.link })">
+            <img ng-src="{{ ::post.img }}" alt="">
+        </a>
+        <a href ui-sref="root.blog.postSingle({ postId: post.id, postLink: post.link })">
+            <div ng-bind-html="::post.content | htmlToPlainText | ellipsis:300"></div>
+        </a>
+        <a href ui-sref="root.blog.postSingle({ postId: post.id, postLink: post.link })" class="btn btn-action">{{ ::'blog.readmore' | translate }}</a>
+    </div>
+</div>
+
+
+<div class="pagination-container col-md-12">
+    <pagination data-max-size="maxSize"
+        data-boundary-links="true"
+        data-rotate="false"
+        data-template-url="ui?view=pagination"
+        data-total-items="totalItems"
+        data-items-per-page="itemsPerPage"
+        ng-model="currentPage">
+    </pagination>
+</div>

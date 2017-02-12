@@ -1,0 +1,14 @@
+<div class="ads-item" ng-repeat="ad in location.items">
+	<div class="controller">
+		<span title="ocultar"
+			class="icon-hide fa"
+			ng-click="hideAd( ad.id )"
+			ng-class="::{ 'fa-eye': ad.status == 'visible', 'fa-eye-slash': ad.status == 'hidden' }">
+		</span>
+		<span title="eliminar"
+			class="icon-remove fa fa-times-circle"
+			ng-click="removeAd( ad.id )">
+		</span>
+	</div>
+	<div ng-bind-html="ad.src | htmlTrusted"></div>
+</div>

@@ -1,0 +1,14 @@
+<div id="blog-container" class="container clearfix">
+
+	<!-- container -->
+	<div class="col-md-offset-1 col-md-7 blog-post-area" style="padding-top: 40px">
+		<div ui-view="posts"></div>
+	</div>
+
+	<!-- sidebar -->
+	<div class="col-md-3" style="padding-top: 40px">
+		<div ui-view="sidebar"></div>
+		<div data-ads data-ads-items="$root.ads.sidebar"></div>
+	</div>
+
+</div>

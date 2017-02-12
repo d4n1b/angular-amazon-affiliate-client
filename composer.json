@@ -1,0 +1,9 @@
+{
+	"config": {
+		"vendor-dir": "vendor"
+	},
+	"require": {
+		"composer/installers": "~1.0",
+		"maciejczyzewski/bottomline": "~0.0.7"
+	}
+}

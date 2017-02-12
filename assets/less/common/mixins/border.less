@@ -1,0 +1,31 @@
+// Single side border-radius
+
+.border-radius( @size ) {
+	-webkit-border-radius: @size;
+  -moz-border-radius: @size;
+			border-radius: @size;
+}
+
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+   border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+     border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+   border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+     border-top-left-radius: @radius;
+}
+
+
+.border-radius-color( @borderTop:0, @borderRight:0, @borderBottom:0, @borderLeft:0, @borderStyle: solid, @borderColor: #fff ) {
+	-webkit-border-radius: @borderTop @borderRight @borderBottom @borderLeft @borderStyle @borderColor;
+	   -moz-border-radius: @borderTop @borderRight @borderBottom @borderLeft @borderStyle @borderColor;
+			border-radius: @borderTop @borderRight @borderBottom @borderLeft @borderStyle @borderColor;
+}

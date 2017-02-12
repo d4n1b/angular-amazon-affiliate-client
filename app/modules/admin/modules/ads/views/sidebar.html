@@ -1,0 +1,14 @@
+<div class="panel-group shop-category-products" id="accordian">
+    <div ng-repeat="( locationId, location ) in sidebar" class="panel panel-default">
+
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a ui-sref="admin.ads.list({ locationId: locationId })"
+                	ng-class="{ disabled: $stateParams.locationId == locationId }">
+                    <span class="badge pull-right"></span>{{ location.name }}
+                </a>
+            </h4>
+        </div>
+        
+    </div>
+</div>

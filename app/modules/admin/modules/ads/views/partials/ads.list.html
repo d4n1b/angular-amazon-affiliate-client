@@ -1,0 +1,13 @@
+<div class="col-md-12 full">
+	<h4 class="text-capitalize">{{ ::location.name }}</h4>
+
+	<div class="alert alert-info" role="alert">
+		<span class="fa fa-info-circle" aria-hidden="true"></span>
+		<span>Para una mejor visualizaci&oacute;n, los formatos recomendados de anuncios para esta categor&iacute;a son:</span>
+		<br/>
+		<strong>{{ ::location.format }}</strong>
+	</div>
+
+	<div ui-view="list"></div>
+
+</div>

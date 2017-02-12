@@ -1,0 +1,19 @@
+div#shop-order {
+	border: 1px solid @gray-lighter;
+	margin-bottom: @margin-base;
+	.user-select();
+
+	> span {
+		padding: @padding-base;
+		display: inline-block;
+		cursor: pointer;
+
+		> span.sort {
+			&::after {
+				font-family: FontAwesome;
+				content: "\f0dc";
+				color: @gray-light;
+			}
+		}
+	}
+}

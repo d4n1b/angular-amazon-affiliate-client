@@ -1,0 +1,29 @@
+.ngdialog.ngdialog-theme-default.ngdialog-theme-custom {
+	padding-left: @padding-base;
+	padding-right: @padding-base;
+
+	.ngdialog-content {
+		border-radius: 0;
+		background-color: #fff;
+
+		@media only screen and ( max-width: @screen-xl ) {
+			width: @ng-dialog-screen-xl-width;
+		}
+	
+		@media only screen and ( max-width: @screen-lg ) {
+			width: @ng-dialog-screen-lg-width;
+		}
+	
+		@media only screen and ( max-width: @screen-md ) {
+			width: @ng-dialog-screen-md-width;
+		}
+
+		@media only screen and ( max-width: @screen-sm ) {
+			width: @ng-dialog-screen-sm-width;
+		}
+
+		@media only screen and ( max-width: @screen-xs ) {
+			width: @ng-dialog-screen-xs-width;
+		}
+	}
+}

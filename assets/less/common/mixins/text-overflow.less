@@ -1,0 +1,23 @@
+// Text overflow
+// Requires inline-block or block for proper styling
+
+.text-overflow( @width: auto, @display: inline-block, @text-overflow: ellipsis ) {
+	max-width: @width;
+	display: @display;
+	overflow: hidden;
+	text-overflow: @text-overflow;
+	-o-text-overflow: @text-overflow;
+	white-space: nowrap;
+}
+
+
+.text-truncate( @line-clamp: 4, @font-size: 12px, @padding: 0 ) {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	padding: @padding;
+	line-height: @font-size;     					/* fallback */
+	max-height: @line-clamp * @font-size;     /* fallback */
+	-webkit-line-clamp: @line-clamp; 			/* number of lines to show */
+	-webkit-box-orient: vertical !important;
+}

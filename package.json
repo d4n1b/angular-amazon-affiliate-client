@@ -1,0 +1,29 @@
+{
+  "name": "NG-afiliados",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "latest",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-copy": "~0.8.1",
+    "grunt-contrib-cssmin": "~0.13.0",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-less": "~1.0.0",
+    "grunt-contrib-uglify": "~0.9.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-css-url-relative": "0.0.6",
+    "grunt-html-snapshot": "~0.6.1",
+    "grunt-usemin": "~3.0.0",
+    "imagemin-mozjpeg": "latest",
+    "load-grunt-tasks": "~3.1.0",
+    "phantomjs": "^1.9.18",
+    "slash": "latest",
+    "underscore": "^1.8.3"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "appPath": "./app"
+}

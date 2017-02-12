@@ -1,0 +1,25 @@
+<div id="shop-regular-filters" class="clearfix">
+	
+	<div class="shop-filter-price">
+		<div class="title text-capitalize">{{ 'price' | translate }}
+			<a href ng-if="filterActive" ng-click="removeFilter()" class="remove-filter text-regular">
+				<span class="fa fa-times-circle"></span> {{ 'remove' | translate }}
+			</a>
+		</div>
+
+		<div class="col-md-4">
+			<input ng-model="minPrice" class="form-control" placeholder="{{ 'Min.' | translate }}" type="number">
+		</div>
+
+		<div class="col-md-4">
+			<input ng-model="maxPrice" class="form-control" placeholder="{{ 'Max.' | translate }}" type="number">
+		</div>
+
+		<div class="col-md-4">
+			<button ng-click="filter({ min: minPrice, max: maxPrice })"
+				class="btn btn-info submit text-uppercase">{{ 'ok' | translate }}
+			</button>
+		</div>
+	</div>
+
+</div>

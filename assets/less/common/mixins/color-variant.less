@@ -1,0 +1,19 @@
+// Colors
+
+.color-variant( @color, @type: normal, @percent: 10% ) {
+	& when ( @type = normal ) {
+		color: @color;
+		&:hover,
+		&:focus {
+			color: darken( @color, @percent );
+		}
+	}
+
+	& when ( @type = inverse ) {
+		color: @color;
+		&:hover,
+		&:focus {
+			color: lighten( @color, @percent );
+		}
+	}
+}

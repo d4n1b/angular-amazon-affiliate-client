@@ -1,0 +1,51 @@
+/*
+     _ _      _       _
+ ___| (_) ___| | __  (_)___
+/ __| | |/ __| |/ /  | / __|
+\__ \ | | (__|   < _ | \__ \
+|___/_|_|\___|_|\_(_)/ |___/
+                   |__/
+
+ Version: 1.5.8
+  Author: Ken Wheeler
+ Website: http://kenwheeler.github.io
+    Docs: http://kenwheeler.github.io/slick
+    Repo: http://github.com/kenwheeler/slick
+  Issues: http://github.com/kenwheeler/slick/issues
+
+ */
+.slick-slider {
+	margin: 0;
+
+	.item {
+		outline: none;
+	}
+
+	.slick-dots {
+		bottom: 0;
+
+		li button:before {
+			font-size: @font-size-small;
+		}
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		color: @gray-light;
+	}
+
+	.slick-prev,
+	.slick-next {
+		z-index: 999;
+	}
+
+	.slick-prev {
+		left: 15px;
+	}
+
+	.slick-next {
+		right: 15px;
+	}
+
+}
+

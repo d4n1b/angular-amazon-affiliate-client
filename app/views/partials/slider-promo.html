@@ -1,0 +1,13 @@
+<div ng-repeat="( category, items ) in categories" ng-if="items.length" class="best-seller">
+	<h3 translate="bestsellerInCategory" translate-values="{ category: ( category | translate ) }"></h3>
+	<div class="slider">
+		<div ng-repeat="item in items" class="item">
+			<a href="{{ item.detailpageurl }}" target="_blank">
+				<img ng-src="{{ item.images.medium }}" alt="{{ item.title }}" title="{{ item.title }}">
+				<!-- Remove temporaly -->
+				<!-- <div ng-if="item.title" class="description">{{ item.title }}</div> -->
+				<!-- <div ng-if="item.price" class="price">{{ item.price | currencyLocale }}</div> -->
+			</a>
+		</div>
+	</div>
+</div>

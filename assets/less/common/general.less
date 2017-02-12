@@ -1,0 +1,50 @@
+.container {
+	clear: both;
+	position: relative !important;
+}
+
+@media ( min-width: @screen-xl ) {
+	.container {
+		width: 1400px;
+	}
+}
+
+@media ( max-width: @screen-xl-max ) {
+	.container {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+div.divider {
+	width: 100%;
+	border-top: 1px solid @gray-lighter;
+	margin: 20px 0;
+}
+
+.price {
+	color: @red-light;
+}
+
+.full {
+	padding: 0;
+}
+
+.text-capitalize {
+	text-transform: capitalize;
+}
+
+.text-regular {
+	text-transform: initial;
+}
+
+.alert {
+	border-radius: 0;
+}
+
+a {
+	&.disabled {
+		pointer-events: none;
+		cursor: default;
+	}
+}

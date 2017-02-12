@@ -1,0 +1,101 @@
+html {
+	margin-bottom: 40px;
+}
+
+body {
+	padding: 80px 0;
+}
+
+.shop-category-products {
+	.panel-body {
+		.hide-controller {
+			span {
+				float: right;
+				cursor: pointer;
+				.color-variant( @admin-action );
+			}
+		}
+	}
+}
+
+.e404 {
+	color: @red-light;
+}
+
+// Ads
+.ads-item {
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-right: @margin-base-horizontal;
+	margin-bottom: @margin-base-vertical;
+}
+
+.controllers {
+	text-align: right;
+	padding-bottom: @padding-base;
+	padding-left: 0;
+}
+
+.icon-hide,
+.icon-remove,
+.icon-bestseller {
+	cursor: pointer;
+}
+
+.icon-hide {
+	color: lighten( @admin-action, 20% );
+	&:hover { color: @admin-action }
+}
+
+.icon-remove {
+	color: lighten( @red-light, 20% );
+	&:hover { color: @red-light }
+}
+
+.icon-bestseller {
+	color: lighten( @orange-light, 20% );
+	&:hover { color: @orange-light }
+}
+
+// Controllers General
+.controller {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 5px 10px;
+	border-radius: 20px;
+	background-color: rgba( 240, 240, 240, .9 );
+
+	.icon-hide,
+	.icon-remove,
+	.icon-bestseller {
+		font-size: 1.4em;
+	}
+}
+
+.product {
+	.product-border {}
+}
+
+
+.products-add {
+	.products-add-submit {
+		margin-top: @margin-base;
+		width: 100%;
+	}
+}
+
+.form-signin {
+	input, button {
+		margin-top: @margin-base-vertical;
+	}
+}
+
+.input-group.has-warning input {
+	border-color: #DAA54A !important;
+}
+
+.result {
+	padding-bottom: @padding-base;
+}

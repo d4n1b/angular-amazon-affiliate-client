@@ -1,0 +1,69 @@
+<div class="col-md-12">
+
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li ng-repeat="content in post" ng-class="{ active: tabselected == content.lang }">
+                <a ng-click="$parent.tabselected=content.lang" data-toggle="tab"><i class="flag-icon flag-icon-{{ content.lang }}"></i></a>
+            </li>
+        </ul>
+    </div><!-- /.tabbale -->
+
+    <div class="tab-content">
+        <form id="post-set-form" action="#" method="post">
+            <div class="tab-pane" ng-repeat="content in post" id="{{ content.lang }}" ng-show="tabselected==content.lang">
+                
+                <div class="col-md-12 form-item full">
+                    <label>Estatus</label>
+                    <select class="form-control" ng-model="content.status" name="posts[{{ content.lang }}][status]">
+                        <option value="visible">Visible</option>
+                        <option value="hidden">Oculto</option>
+                    </select>
+                </div>
+        
+                <div class="col-md-12 form-item full">
+                    <label>Imagen <span class="fa fa-info-circle" title="Tama&ntilde;o de imagen: 800x250 p&itilde;xeles."></span></label>
+                    <div data-croppic data-croppic-preload="content.img" data-width="800" data-height="250"></div>
+                    <input class="imagen form-control" name="posts[{{ content.lang }}][img]" type="hidden" value="{{ content.img }}"/>
+                </div>
+    
+                <div class="col-md-12 form-item full">
+                    <label>Autor</label>
+                    <input class="form-control" name="posts[{{ content.lang }}][author]" type="text" value="{{ content.author || 'Vanessa Da Mata' }}"/>
+                </div>
+
+                <div class="col-md-12 form-item full">
+                    <label>T&iacute;tulo</label>
+                    <input class="form-control" name="posts[{{ content.lang }}][title]" type="text" value="{{ content.title }}"/>
+                </div>
+
+                <div class="col-md-12 form-item full">
+                    <label class="label-control" for="content">Contenido</label>
+                    <textarea id="ckeditor{{ content.lang }}"
+                        ng-model="content.content"
+                        name="posts[{{ content.lang }}][content]"
+                        class="form-control editor"
+                        data-ckeditor data-ckeditor-model="content.content"
+                        rows="5" cols="100">
+                    </textarea>
+                </div>
+
+                <input type="hidden" name="post_id" value="{{ content.id }}">
+
+            </div>
+
+            <input type="hidden" name="action" value="set">
+        </form>
+    </div>
+
+    <div class="col-md-12">
+        <div id="blog-set-result" class="result"></div>
+    </div>
+
+    <div id="action-controller" class="form-item col-md-12">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button ng-click="restoreData()" type="button" class="btn btn-default">Cancelar</button>
+            <button ng-click="savePost()" type="button" class="btn btn-success">Guardar</button>
+        </div>
+    </div>
+
+</div>

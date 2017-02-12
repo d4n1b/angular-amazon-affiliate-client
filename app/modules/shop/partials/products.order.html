@@ -1,0 +1,17 @@
+<div class="col-md-12">
+	<div id="shop-order">
+		<span ng-click="order('title')">{{ 'shop.filters.alphabetical' | translate }}
+			<span class="fa fa-sort" ng-show="predicate !== 'title'"></span>
+			<span ng-show="predicate === 'title'"
+				ng-class="{ 'fa fa-sort-asc': !reverse, 'fa fa-sort-desc': reverse }">
+			</span>
+		</span>
+
+		<span ng-click="order('amount')">{{ 'shop.filters.price' | translate }}
+			<span class="fa fa-sort" ng-show="predicate !== 'amount'"></span>
+			<span ng-show="predicate === 'amount'"
+				ng-class="{ 'fa fa-sort-asc': !reverse, 'fa fa-sort-desc': reverse }">
+			</span>
+		</span>
+	</div>
+</div>

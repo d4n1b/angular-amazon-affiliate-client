@@ -1,0 +1,20 @@
+// Contextual backgrounds
+
+.bg-variant( @color, @type: normal ) {
+
+	& when ( @type = normal ) {
+		background-color: @color;
+		&:hover,
+		&:focus {
+			background-color: darken( @color, 5% );
+		}
+	}
+
+	& when ( @type = inverse ) {
+		background-color: @color;
+		&:hover,
+		&:focus {
+			background-color: lighten( @color, 5% );
+		}
+	}
+}

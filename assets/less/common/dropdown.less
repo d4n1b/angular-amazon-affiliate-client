@@ -1,0 +1,31 @@
+.dropdown-toggle,
+[data-hover="dropdown"],
+[data-toggle="dropdown"] {
+	cursor: pointer;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+	margin-top: 0;
+	
+	a:not([href]) {
+		cursor: default;
+	}
+
+	> li > a {
+		.bg-variant( transparent ) !important;
+		.color-variant( @gray-light, normal, 40% ) !important;
+	}
+	
+	a {
+		.bg-variant( transparent ) !important;
+		.color-variant( @link-color-base, inverse ) !important;
+	}
+
+}
+
+.popover {
+	border-radius: 0;
+	max-width: initial;
+	width: 853px;
+}

@@ -1,0 +1,15 @@
+<div class="col-md-12">
+	<div class="controllers col-md-12">
+	    <a ui-sref="admin.blog.add" class="btn btn-success">Crear nuevo Post <span class="fa fa-plus"></span></a>
+	    <a ui-sref="admin.blog" ui-sref-opts="{reload: true}" class="btn btn-info">Actualizar <span class="fa fa-refresh"></span></a>
+	</div>
+</div>
+
+<div class="col-md-3" ui-view="sidebar"></div>
+
+<div class="col-md-9" ui-view="content">
+	<div class="alert alert-warning" role="alert">
+		<span class="fa fa-info-circle"></span>
+		<span>Selecciona un post para comenzar.</span>
+	</div>
+</div>

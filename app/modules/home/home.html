@@ -1,0 +1,35 @@
+<div id="home-container">
+
+	<!-- slider main -->
+	<slider-main data-items="$root.mainSlider"></slider-main>	
+
+	<!-- container -->
+	<section class="container clearfix">
+			
+		<div class="col-md-9" style="padding-right: 0;">
+
+			<slider-promo data-items="bestsellerTop"></slider-promo>
+
+			<div id="categories" class="clearfix">
+				<h3>{{ 'categories' | translate }}</h3>
+				<div ng-repeat="category in $root.menus.shop" class="col-md-6 item">
+					<a href ui-sref="root.shop.query({ categoryId: category.id, title: category.title })">
+						<h4 class="title">{{ category.translate | translate }}</h4>
+						<img ng-src="{{ category.src }}" alt="{{ category.alt }}" title="{{ category.name }}">
+					</a>
+				</div>
+			</div>
+	
+			<slider-promo data-items="bestsellerBottom"></slider-promo>
+
+			<div data-ads data-ads-items="$root.ads.content"></div>
+
+		</div>
+		
+		<div id="sidebar" class="sidebar-ads right col-md-3">
+			<div data-ads data-ads-items="$root.ads.sidebar"></div>
+		</div>
+
+	</section>
+	
+</div>

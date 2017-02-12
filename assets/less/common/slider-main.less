@@ -1,0 +1,25 @@
+slider-main {
+
+	.slick-slide {
+		overflow: hidden;
+
+		img {
+			max-width: 100%;
+
+			@media only screen and ( max-width: @screen-sm ) {
+				max-width: initial;
+				max-height: 210px;
+				position: relative;
+				left: -50%;
+			}
+
+			@media only screen and ( max-width: @screen-xs ) {
+				max-height: 160px;
+				left: -60%;
+			}
+		}
+	}
+	
+
+
+}

@@ -1,0 +1,206 @@
+header#header {
+	padding: 10px;
+	background-color: @header-bg;
+
+	// Brand logo
+	div#header-brand {
+		padding: 0 @padding-base;
+
+		.logo {
+
+			&:first-child {
+				text-align: center;
+				margin-bottom: @padding-base;
+				// max-width: 160px; // merchanpricing
+			}
+
+			img {
+				max-width: 100%;
+			}
+    }
+
+		.ads {
+			padding-top: 7px;
+		}
+	}
+
+
+	// Search icons
+	div#header-search {
+		padding: 10px 15px;
+		
+		.input-group {
+			select, input#search-input, button {
+				line-height: 1.8em !important;
+				height: 40px !important;
+			}
+			
+			// remove select when screen is to small
+			@media only screen and ( max-width: @screen-xs ) {
+				select {
+					display: none;
+				}
+			}
+
+		}
+	}
+
+
+	// header-nav
+	div#header-nav {
+		padding: 0 @padding-base;
+
+		@media only screen and ( max-width: @screen-sm ) {
+			text-align: center;
+			font-size: 1.4em;
+
+			.divider {
+				display: none;
+			}
+		}
+
+		// Fuckin' annoying left padding
+		ul { padding-left: @padding-base-vertical; }
+
+		> ul {
+			display: inline-block;
+			margin-bottom: -1px;
+
+			> li {
+				padding: 0;
+
+				.icon-arrow {
+					font-size: 0.6em;
+				}
+
+				> .dropdown-toggle {
+					display: block;
+					padding: @padding-base-vertical @padding-base-horizontal;
+				}
+				
+				// Dropdown full width
+				.dropdown-menu.dropdown-menu-full {
+					margin: 0;
+					padding: @padding-base;
+					width: 70%;
+					left: 20%;
+					
+					@media only screen and ( max-width: @screen-sm ) {
+						width: 95%;
+						left: 2.5%;
+					}
+
+					&.dropdown-menu-left {
+						left: 0%;
+						right: auto;
+					}
+
+					&.dropdown-menu-right {
+						left: auto;
+						right: 0%;
+					}
+
+				}
+				
+				&.dropdown-all-categories {
+
+					ul.dropdown-menu {
+						clear: both;
+
+						> li {
+							min-height: 240px; // bisuteriaonline
+							// min-height: 160px; // merchanpricing
+
+							@media only screen and ( max-width: @screen-xs ) {
+								text-align: center;
+							}
+						}
+					}
+				}
+
+				&.dropdown-bestseller {
+					position: relative;
+					
+					@media only screen and ( max-width: @screen-sm ) {
+						display: none;
+					}
+
+					.popover-title {
+						background-color: transparent;
+						font-size: @font-size-h4;
+					}
+
+					.popover-content {
+						.item {
+							height: 250px;
+
+							img {
+								max-height: 100%;
+								width: auto;
+								display: block;
+								text-align: center;
+								margin: 0 auto;
+							}
+						}
+					}
+				}
+		
+				&.dropdown-category-list {
+					position: relative; // Bisuteriaonline
+					
+					@media only screen and ( max-width: @screen-sm ) {
+						display: none;
+					}
+
+					// Merchandpricing
+					.dropdown-menu {
+						padding: 0;
+					}
+	
+					.category-banner {
+						padding: 0; 
+						overflow: hidden;
+					}
+				}
+
+				// Blog
+				&.dropdown-blog {
+					@media only screen and ( max-width: @screen-sm ) {
+						display: none;
+					}	
+				}
+
+
+				// Social navbar
+				&.social-nav {
+					a {
+						vertical-align: middle;
+						padding-right: 5px;
+						font-size: 1.4em;
+						line-height: 0;
+					}
+				}
+	
+				// Language navbar
+				&.language-nav {
+					position: relative;
+
+					.dropdown-menu {
+						left: auto;
+						right: 0;
+					}
+				}
+			}
+	
+			// Divider
+			li.divider:before {
+				content: "|";
+				padding-left: @padding-base; 
+				padding-right: @padding-base;
+				color: lighten( @gray-light, 30% );
+			}
+
+		}
+	}
+
+}

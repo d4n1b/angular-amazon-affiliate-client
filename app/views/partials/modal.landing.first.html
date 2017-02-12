@@ -1,0 +1,27 @@
+<div id="modal-landing">
+
+	<!-- promo banner -->
+	<img ng-src="{{ firstBanner }}" alt="">
+
+	<form action="#" method="get" name="newsletterForm" novalidate>
+
+		<div class="submit-group input-group">
+			<input class="form-control" type="email" name="email" ng-model="email" placeholder="{{ 'newsletter.placeholder' | translate }}" required>
+			<div class="input-group-btn">
+				<button class="btn btn-action"
+					ng-click="joinNewsletter( email )"
+					ng-disabled="!email.length || newsletterForm.email.$dirty && newsletterForm.email.$invalid"
+					type="button">{{ 'newsletter.submit' | translate }}</button>
+			</div>
+		</div>
+
+		<div ng-show="newsletterForm.email.$error.email">
+			<div class="alert alert-danger" role="alert">	<span class="fa fa-exclamation-circle"></span> {{ 'form.invalid.email' | translate }}</div>
+	  </div>
+
+		<div class="close-message text-center">
+			<a href ng-click="closeModal()">{{ 'newsletter.noThanks' | translate }} <span class="icon-close fa fa-close"></span></a>
+		</div>
+
+	</form>
+</div>

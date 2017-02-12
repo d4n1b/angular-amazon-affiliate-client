@@ -1,0 +1,41 @@
+div.sidebar {
+	img {
+	   max-width: 100%;
+	}
+}
+
+div#sidebar {
+	padding: 25px @padding-base;
+	text-align: center;
+	position: relative;
+	display: block;
+	height: 100%;
+	background-color: lighten( @gray-lighter, 5% );
+	top: 0;
+	bottom: 0;
+	position: absolute;
+
+	&.right {
+		right: 0;
+	}
+
+	&.left {
+		left: 0;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+	}
+
+	div.banner img {
+		margin-bottom: 20px !important;
+		width: 100%;
+	}
+
+}

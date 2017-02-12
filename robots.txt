@@ -1,0 +1,3 @@
+User-agent: *
+ Disallow: /es/content/policies/?cl=cookie-policy
+ Disallow: /es/content/policies/?cl=privacy-policy

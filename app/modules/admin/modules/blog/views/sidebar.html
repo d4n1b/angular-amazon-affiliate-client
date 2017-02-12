@@ -1,0 +1,23 @@
+<div class="panel-group shop-category-products" id="accordian">
+    
+    <div ng-show="noPosts">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <span class="fa fa-file-text-o"></span>
+                No hay Posts disponibles.
+            </h4>
+        </div>
+    </div>
+
+    <div ng-repeat="post in sidebar" class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a title="{{ post.title }}"
+                   ui-sref="admin.blog.edit({ postId: post.id })">
+                    <span class="fa fa-file-text-o"></span> {{ post.title | ellipsis:70 }}
+                </a>
+                <span ng-click="removePost( post.id )" class="icon-remove fa fa-times-circle" title="eliminar"></span>
+            </h4>
+        </div>
+    </div>
+</div>

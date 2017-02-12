@@ -1,0 +1,24 @@
+<div class="col-md-12 full text-right">
+    <a class="btn btn-action" ui-sref="root.blog.postList">
+        <span class="fa fa-chevron-circle-left"></span> {{ ::'blog.backButton' | translate }}
+    </a>
+</div>
+
+<div class="single-blog-post">
+    <h1>{{ ::post.title }}</h1>
+    <div class="post-meta">
+        <ul>
+            <li><i class="fa fa-user"></i> {{ ::post.author }}</li>
+            <li><i class="fa fa-clock-o"></i> {{ ::post.date | date:'h:mm:ss' }}</li>
+            <li><i class="fa fa-calendar"></i> {{ ::post.date | date:'MM/dd/yyyy' }}</li>
+        </ul>
+    </div>
+    <img ng-src="{{ ::post.img }}" alt="">
+    <div ng-bind-html="::post.content | htmlTrusted"></div>
+</div>
+
+<div class="col-md-12 full text-right">
+    <a class="btn btn-action" ui-sref="root.blog.postList">
+        <span class="fa fa-chevron-circle-left"></span> {{ ::'blog.backButton' | translate }}
+    </a>
+</div>

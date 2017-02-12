@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="%%name%%">
+    <meta name="description" content="%%description%%">
+    <meta name="keywords" content="%%keywords%%">
+    <meta name="robots" content="index,follow"/>
+    <meta name="google" content="nositelinkssearchbox, notranslate"/>
+    <meta name="msvalidate.01" content="%%mscontentID%%"/>
+    <meta name="fragment" content="!"/>
+    <title ng-bind="$root.title + '%%title%%'"></title>
+    <base href="/">
+    <link rel="shortcut icon" href="%%favicon%%">
+    <!-- build:js assets/js/ie9.min.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/dist/html5shiv/html5shiv.js"></script>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+</head>
+
+<body ng-cloak>
+    
+    <cookie-law-banner message="{{ cookieMessage }}" accept-text="{{ cookieAcceptText }}"></cookie-law-banner>
+
+	<header id="header"></header>
+
+	<div ui-view="content"></div>
+
+	<footer id="footer"></footer>
+    
+     <!-- build:css assets/css/app.min.css -->
+    <link href="bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/components-font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="bower_components/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="bower_components/animate.css/animate.css" rel="stylesheet">
+    <link href="bower_components/ngDialog/css/ngDialog.min.css" rel="stylesheet">
+    <link href="bower_components/ngDialog/css/ngDialog-theme-default.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="bower_components/requirejs/require.js"></script>
+    <script type="text/javascript" src="app/requirejs-config.js"></script>
+    <script type="text/javascript">
+        require( ['app/app'], function() {});
+    </script>
+
+</body>
+</html>

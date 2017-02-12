@@ -1,0 +1,33 @@
+<div class="container full">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="col-md-12">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">Admin</span>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active: $state.includes('admin.blog') }">
+                        <a ui-sref="admin.blog">Blog</a>
+                    </li>
+                    <li ng-class="{ active: $state.includes('admin.shop') }">
+                        <a ui-sref="admin.shop">Productos</a>
+                    </li>
+                    <li ng-class="{ active: $state.includes('admin.ads') }">
+                        <a ui-sref="admin.ads">Publicidad</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href ng-click="logout()">Cerrar Sesi&oacute;n</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div><!-- /.container -->
+
+<div ui-view="main"></div>

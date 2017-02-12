@@ -1,0 +1,26 @@
+<div id="shop-container">
+
+	<section class="container clearfix">
+	
+		<div class="col-md-12">
+			<ul ng-show="title" class="breadcrumb">
+				<li><h1 ng-bind="title"></h1></li>
+			</ul>
+		</div>
+
+		<div class="col-md-3 sidebar">
+			<div data-shop-sidebar-menu data-items="$root.menus.shop"></div>
+			<div data-ads data-ads-items="$root.ads.filters"></div>
+			<div ng-show="!$state.current.data.emptyProducts" ui-view="filters"></div>
+			<div data-ads data-ads-items="$root.ads.sidebar"></div>
+		</div>
+
+		<div class="col-md-9 content full">
+			<div ng-show="!$state.current.data.emptyProducts" ui-view="order"></div>
+			<div ui-view="products"></div>
+			<div ng-show="!$state.current.data.emptyProducts" ui-view="pagination"></div>
+		</div>
+
+	</section>
+
+</div>

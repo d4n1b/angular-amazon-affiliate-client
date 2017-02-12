@@ -1,0 +1,33 @@
+<div class="panel-group shop-category-products" id="accordian">
+    <div ng-repeat="category in sidebar" class="panel panel-default">
+
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a ng-click="togglePanel( $event )" href=""
+                  data-toggle="#{{ category.id }}"
+                  data-parent="#accordian">
+                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>{{ category.name }}
+                </a>
+            </h4>
+        </div>
+
+        <div id="{{ category.id }}" class="panel-collapse collapse">
+            <div class="panel-body">
+                <ul class="list-unstyled">
+                    <li ng-repeat="subcategory in category.items">
+                        <a ui-sref="admin.shop.subcategory({ categoryId: category.id, subcategoryId: subcategory.link })">
+                            {{ subcategory.name }}
+                        </a>
+                        <span class="hide-controller">
+                            <!-- <span title="Ocultar" class="fa"
+                                ng-class="::{ 'fa-eye': subcategory.status == 'visible', 'fa-eye-slash': subcategory.status == 'hidden' }"
+                                ng-click="hideSubcategory({ category: category.name, subcategory: subcategory.name })">
+                            </span> -->
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
